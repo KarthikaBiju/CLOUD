@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MYG - Product Showcase</title>
+
+    <style>
+
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        
+
+        nav {
+            background-color: #222;
+            padding: 15px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ddd;
+        }
+
+        header h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        
+
+        .products {
+            padding: 40px;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        
+
+        .product-card {
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+            transition: transform 0.3s;
+        }
+
+        
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .product-card p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 15px;
+            padding: 10px 20px;
+
+            background-color: #222;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: orange;
+        }
+
+        
+
+        .price-section {
+            padding: 40px;
+        }
+
+        .price-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #222;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #eee;
+        }
+
+        
+
+        .features {
+            padding: 40px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .feature {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+
+            border-radius: 8px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: orange;
+        }
+
+        
+
+        footer {
+            background-color: #222;
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            header h2 {
+                font-size: 26px;
+            }
+
+            .products,
+            .price-section,
+            .features {
+                padding: 20px;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+
+    <nav>
+
+        <h1>TechStore</h1>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    
+
+    <header id="home">
+
+        <h2>Welcome to TechStore</h2>
+
+        <p>
+            Discover the latest and best technology products.
+        </p>
+
+    </header>
+
+
+    
+
+    <section class="products" id="products">
+
+        <h2>Our Products</h2>
+
+        <div class="product-container">
+
+            
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8"
+                    alt="Laptop">
+
+                <h3>Premium Laptop</h3>
+
+                <p>
+                    High-performance laptop suitable for
+                    programming, gaming and professional work.
+                </p>
+
+                <div class="price">
+                    ₹75,000
+                </div>
+
+                <a href="#" class="btn">
+                    Buy Now
+                </a>
+
+            </div>
+
+
+            
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                    alt="Smartphone">
+
+                <h3>Smartphone</h3>
+
+                <p>
+                    Modern smartphone with excellent camera,
+                    powerful processor and long battery life.
+                </p>
+
+                <div class="price">
+                    ₹35,000
+                </div>
+
+                <a href="#" class="btn">
+                    Buy Now
+                </a>
+
+            </div>
+
+
+            
+
+            <div class="product-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                    alt="Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <p>
+                    Enjoy high-quality sound with wireless
+                    connectivity and comfortable design.
+                </p>
+
+                <div class="price">
+                    ₹5,000
+                </div>
+
+                <a href="#" class="btn">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="price-section" id="prices">
+
+        <h2>Product Price Table</h2>
+
+        <table>
+
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Availability</th>
+            </tr>
+
+            <tr>
+                <td>Premium Laptop</td>
+                <td>Laptop</td>
+                <td>₹75,000</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Smartphone</td>
+                <td>Mobile</td>
+                <td>₹35,000</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Wireless Headphones</td>
+                <td>Accessories</td>
+                <td>₹5,000</td>
+                <td>Available</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    
+
+    <section class="features">
+
+        <div class="feature">
+
+            <h3> Free Home Delivery</h3>
+
+            <p>
+                Free delivery on selected products.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3> Secure Payment</h3>
+
+            <p>
+                Safe and secure payment options.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <h3> Quality Products</h3>
+
+            <p>
+                High-quality products at affordable prices.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    
+
+    <footer id="contact">
+
+        <p>
+            &copy; Thank You For visiting . All Rights Reserved.
+        </p>
+    </footer>
+</body>
+</html>
